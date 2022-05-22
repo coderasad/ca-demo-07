@@ -1,0 +1,755 @@
+/*======================
+   01. Google fonts
+========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap');
+
+/*======================
+   02. Basic css
+========================*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	overflow: hidden;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #000000;
+	position: relative;
+}
+
+/* heading CSS */
+h1{
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 6rem;
+	line-height: 1.2;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+h2{
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus{
+	outline: none;
+}
+
+/* button */
+.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 19rem;
+	height: 5.6rem;
+	font-weight: 700;
+	font-size: 2.2rem;
+	color: #fff;
+	background: #009FB7;
+	border: 2px solid transparent;
+	border-radius: 2.9rem;
+	line-height: 1;
+	transition: .2s;
+}
+
+.btn:hover{
+	color: #009FB7;
+	background: transparent;
+	border-color: #009FB7;
+}
+
+.btn.focus,
+.btn:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+/* ---------------------------- Header area start -------------------- */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 0;
+	transition: .4s;
+	z-index: 1024;
+}
+
+header.sticky {
+	padding: 1rem 0;
+	background: #fff;
+	height: auto;
+	box-shadow: 0 0 1rem 0 #0000002e;
+}
+
+header .logo{
+	display: inline-block;
+	max-width: 19.5rem;
+}
+
+.nav-up {
+	top: -100%;
+	transition: .5s;
+}
+
+/* menu CSS */
+.menu_side {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+#menu li {
+	display: inline-block;
+	color: #fff;
+	margin-right: 6rem;
+}
+
+#menu li .nav-link {
+	font-weight: 500;
+	font-size: 2.2rem;
+	text-transform: capitalize;
+	color: #000000;
+	background: none;
+	padding: 0;
+	transition: 0.1s;
+}
+
+#menu li .nav-link.active,
+#menu>li>.nav-link:hover {
+	color: #009FB7;
+}
+
+/*Hamburger-menu  CSS*/
+.hamburger-menu {
+	cursor: pointer;
+	display: none;
+	float: right;
+	z-index: 999;
+}
+
+.hamburger-menu span {
+	background: #000000;
+	width: 30px;
+	height: 3px;
+	display: block;
+	margin: 5px 0;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover .line-top {
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.hamburger-menu:hover .line-bottom {
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+.hamburger-menu .line-top.current {
+	-webkit-transform: translateY(200%) rotate(135deg);
+	-ms-transform: translateY(200%) rotate(135deg);
+	transform: translateY(200%) rotate(135deg);
+}
+
+.hamburger-menu .line-center.current {
+	opacity: 0;
+}
+
+.hamburger-menu .line-bottom.current {
+	-webkit-transform: translateY(-325%) rotate(-135deg);
+	-ms-transform: translateY(-325%) rotate(-135deg);
+	transform: translateY(-325%) rotate(-135deg);
+}
+
+/*ofcanvas-menu CSS*/
+.ofcavas-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: -1;
+	top: 0;
+	display: none;
+	left: -100%;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	text-align: center;
+}
+
+.ofcavas-menu.current {
+	left: 0;
+}
+
+.ofcavas-menu ul.menu_link {
+	margin-top: 20rem;
+}
+
+.ofcavas-menu ul.menu_link li{
+	padding: .8rem 0;
+}
+
+.ofcavas-menu ul.menu_link .nav-link {
+	font-weight: 500;
+	font-size: 2.2rem;
+	text-transform: capitalize;
+	color: #000000;
+	transition: 0.1s;
+}
+
+.ofcavas-menu ul.menu_link li a.active,
+.ofcavas-menu ul.menu_link a:hover {
+	color: #009FB7;
+}
+
+.ofcavas-menu .btn{
+	margin-top: 1rem;
+}
+
+/* ---------------------------- Hero area start -------------------- */
+
+.hero_area{
+	display: flex;
+	align-items: center;
+	background: url(../img/hero-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 30rem 0 18rem;
+	height: 100vh;
+}
+
+.hero_area p{
+	font-size: 1.5rem;
+	padding: 4rem 0 6rem;
+	letter-spacing: 0.05em;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+.hero_area .btn{
+	width: 17rem;
+	font-size: 1.8rem;
+}
+
+.hero_area .btn.whyTiCash{
+	width: 21rem;
+	font-weight: 500;
+	color: #000000;
+	background: transparent;
+	border: .3rem solid #009FB7;
+	margin-left: 2rem;
+}
+
+.hero_area .btn.whyTiCash:hover{
+	color: #fff;
+	background-color: #009FB7;
+	font-weight: 700;
+}
+
+/* ---------------------------- Features area start -------------------- */
+
+.features_area{
+	padding: 14rem 0 10rem;
+}
+
+.features_area h2{
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 0.01em;
+	color: #103C55;
+	padding-bottom: 5rem;
+}
+
+.features_area .icon_box{
+	height: 100%;
+	padding: 3rem 2rem;
+	background: #FFFFFF;
+	border-radius: 9.2872px;
+	transition: .2s;
+	margin-top: 3rem;
+}
+
+.features_area .icon_box:hover{
+	box-shadow: 0px 30.9573px 47.6743px rgba(176, 183, 195, 0.22);
+}
+
+.features_area .icon_box h4{
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: #323B4B;
+	padding: 2rem 0;
+}
+
+.features_area .icon_box p{
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------------------- see app area start -------------------- */
+
+.seeApp_area{
+	padding: 10rem 0;
+}
+
+.seeApp_area h2{
+	text-align: center;
+	color: rgba(16, 60, 85, 0.85);
+	line-height: 1.5;
+	margin-bottom: 5rem;
+}
+
+.seeApp_area .swiper {
+	max-width: 600px;
+	height: 670px;
+}
+
+.seeApp_area .swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.seeApp_area .swiper-slide img {
+	display: block;
+	width: 100%;
+}
+
+.seeApp_area .swiper-pagination-bullet{
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #C4C4C4;
+	opacity: 1;
+}
+
+.seeApp_area .swiper-pagination-bullet-active{
+	background: #FCB201;
+}
+
+.seeApp_area .btn{
+	margin-top: 3rem;
+}
+
+/* ---------------------------- choose area start -------------------- */
+
+.choose_area{
+	text-align: center;
+	padding: 10rem 0;
+}
+
+.choose_area h3{
+	font-weight: 700;
+	font-size: 3.4rem;
+	line-height: 1.5;
+	color: #34596F;
+	padding-bottom: 6.8rem;
+	position: relative;
+}
+
+.choose_area h3::before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 4rem;
+	transform: translateX(-50%);
+	width: 9rem;
+	height: .5rem;
+	background: linear-gradient(#34BFFE 100%, #77D7F2 100%);
+}
+
+.choose_area p{
+	color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------------------- userExperience area start -------------------- */
+
+.userExperience_area{
+	padding-top: 13.5rem;
+}
+
+.userExperience_body{
+	padding: 11.5rem 0 11.5rem 13rem;
+	background: linear-gradient(199.45deg, #009FB7 -0.26%, #103C55 107%);
+	border-radius: 2.4rem;
+	position: relative;
+}
+
+.userExperience_area .shape{
+	max-width: 70rem;
+	margin-left: -20rem;
+	margin-top: -48rem;
+}
+
+.userExperience_area h2{
+	color: #fff;
+	font-weight: 600;
+	line-height: 1.12;
+	margin-bottom: 2.4rem;
+}
+
+.userExperience_area .decsription{
+	font-family: 'Inter', sans-serif;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	margin-bottom: 3rem;
+}
+
+.userExperience_area .icon_box{
+	display: flex;
+	padding: 4rem 3.5rem 4rem 0;
+	border-bottom: .3rem solid rgba(116, 143, 181, 0.15);
+}
+
+.userExperience_area .icon_box:last-child{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.userExperience_area .icon_box .icon{
+	flex-shrink: 0;
+	margin-right: 2.4rem;
+}
+
+.userExperience_area .icon_box h5{
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 1.2;
+	color: #FFFFFF;
+	margin-bottom: 1.5rem;
+}
+
+.userExperience_area .icon_box p{
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: #FFFFFF;
+}
+
+/* ---------------------------- FAQ area start -------------------- */
+
+.faq_area{
+	padding: 20rem 0 15rem;
+	position: relative;
+	overflow: visible;
+}
+
+.faq_area h2{
+	line-height: 1.5;
+	color: #34596F;
+	margin-bottom: .6rem;
+}
+
+.faq_area .accordion .card{
+	padding: 0;
+	padding-top: 2.4rem;
+	border: 0;
+	border-bottom: 1px solid rgba(130, 152, 171, 0.35) !important;
+	background: transparent;
+}
+
+.faq_area .accordion .card:last-child{
+	border-bottom: 0 !important;
+}
+
+.faq_area .accordion .card-header{
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+.faq_area .accordion button {
+	width: 100%;
+	background: none;
+	outline: none;
+	border: none;
+	text-align: left;
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+	color: #304659;
+	padding: 0;
+	margin-bottom: 1rem;
+}
+
+.faq_area .accordion .card-body{
+	padding: 0;
+	padding-bottom: 2.4rem;
+	border: 0;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: #3A312B;
+	background: transparent;
+}
+
+.faq_area .shape{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/* ---------------------------- partner area start -------------------- */
+
+.partner_area{
+	padding: 24rem 0 16rem;
+}
+
+.partner_area .icon{
+	margin-bottom: 10rem;
+}
+
+.partner_area h4{
+	font-size: 3.2rem;
+	line-height: 1.5;
+	color: #103C55;
+}
+
+/* ---------------------------- Help box start -------------------- */
+
+.help_box .box {
+	max-width: 68.5rem;
+	padding: 5rem 3.5rem 4rem 5rem;
+	margin: auto;
+	display: flex;
+	background: #F5F5F5;
+	box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.05);
+	border-radius: 3.8rem;
+	z-index: 2;
+	position: relative;
+}
+
+.help_box .box .icon{
+	flex-shrink: 0;
+	margin-top: 1rem;
+	margin-right: 2.5rem;
+}
+
+.help_box .box h5{
+	color: #000000;
+	font-weight: 500;
+	font-size: 2.8rem;
+	line-height: 1.5;
+	margin-bottom: .6rem;
+}
+
+.help_box .box a{
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin-bottom: 2rem;
+}
+
+/* ---------------------------- Footer start -------------------- */
+
+footer{
+	text-align: center;
+	padding-top: 21rem;
+	background: #103C55;
+	margin-top: -11rem;
+	overflow: hidden;
+}
+
+footer .logo{
+	display: inline-block;
+	max-width: 24rem;
+}
+
+footer ul li{
+	display: inline-block;
+}
+
+footer .social_links{
+	padding: 6rem 0 6.5rem;
+}
+
+footer .social_links li{
+	margin: 0 1.6rem;
+}
+
+footer .menu_links li{
+	margin: 0 3.5rem;
+}
+
+footer .social_links li a{
+	transition: .2s;
+}
+
+footer .social_links li a:hover{
+	opacity: .6;
+}
+
+footer .menu_links li a{
+	font-weight: 500;
+	font-size: 2.2rem;
+	color: #FFFFFF;
+	transition: .2s;
+}
+
+footer .menu_links li a:hover{
+	color: #009FB7;
+}
+
+/* ---------------------------- copyright -------------------- */
+
+.copyright{
+	padding: 7rem 0 10rem;
+	background: #103C55;
+}
+
+.copyright p{
+	color: #fff;
+	text-align: center;
+	font-weight: 500;
+}
+
+.copyright a{
+	color: #FCB201;
+	transition: .2s;
+}
+
+.copyright a:hover{
+	color: #009FB7;
+}
+
+
+
+
+/* page loader  */
+#preloader {
+	position: fixed;
+	background: #fff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader3 {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	padding: 0px;
+	text-align: left;
+}
+
+.loader3 span {
+	position: absolute;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #009FB7;
+	-webkit-animation: loader3 1.5s linear infinite;
+	animation: loader3 1.5s linear infinite;
+}
+
+.loader3 span:last-child {
+	animation-delay: -0.9s;
+	-webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader3 {
+	0% {
+		transform: scale(0, 0);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes loader3 {
+	0% {
+		-webkit-transform: scale(0, 0);
+		opacity: 0.8;
+	}
+
+	100% {
+		-webkit-transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+
+/*return-to-top START CSS*/
+.back-to-top {
+	width: 4.5rem;
+	height: 4.5rem;
+	line-height: 4.3rem;
+	text-align: center;
+	display: none;
+	position: fixed;
+	bottom: 3rem;
+	right: 2rem;
+	border-radius: 50%;
+	background: #009FB7;
+	z-index: 1000;
+}

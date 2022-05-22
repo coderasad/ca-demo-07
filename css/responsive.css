@@ -1,0 +1,177 @@
+/*Extra large devices (large desktops, 991 and up)*/
+
+@media (min-width: 2000px) {
+	.container {
+		max-width: 1800px;
+	}
+}
+
+@media (min-width: 1600px) and (max-width: 1999px) {
+	.container {
+		max-width: 1480px;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+	.container {
+		max-width: 1380px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	html{
+		font-size: 53%;
+	}
+	.features_area .icon_box h4{
+		font-size: 1.7rem;
+	}
+	.userExperience_area .shape {
+		max-width: 65rem;
+		margin-left: -16rem;
+		margin-top: -52rem;
+	}
+}
+
+@media (max-width: 1199px) { 
+	.features_area .icon_box{
+		height: auto;
+	}
+	.faq_area .shape{
+		width: 70rem;
+	}
+}
+
+@media (max-width: 991px) {
+	.menu_side{
+		display: none;
+	}
+	.hamburger-menu {
+		display: block;
+	}
+	.ofcavas-menu {
+		display: block;
+	}
+	html{
+		font-size: 58%;
+	}
+	h2{
+		font-size: 4.5rem;
+	}
+	.hero_area{
+		text-align: center;
+		padding: 20rem 0 20rem;
+	}
+	.hero_area img{
+		max-width: 80%;
+		margin-bottom: 5rem;
+	}
+	.features_area h2{
+		text-align: center;
+	}
+	.userExperience_body{
+		padding: 5rem 5rem 10rem 5rem;
+	}
+	.userExperience_area .title_box{
+		text-align: center;
+		margin-bottom: 8rem;
+	}
+	.userExperience_area .shape {
+		max-width: 100%;
+		margin-left: 0;
+		margin-top: -14rem;
+		margin-bottom: 6rem;
+	}
+	.userExperience_area .icon_box{
+		padding-right: 0;
+	}
+	.faq_area h2{
+		text-align: center;
+	}
+	.faq_area .shape{
+		display: none;
+	}
+	.partner_area .logo{
+		display: inline-block;
+		margin-top: 10rem;
+	}
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+	html{
+		font-size: 50%;
+	}
+	.features_area .icon_box{
+		text-align: center;
+	}
+	.seeApp_area .swiper {
+		height: 580px;
+	}
+	.seeApp_area .swiper-slide {
+		width: 260px;
+	}
+	footer .menu_links li {
+		margin: 0 2rem;
+	}
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+	h1{
+		font-size: 4.5rem;
+	}
+	h2{
+		font-size: 3.8rem;
+	}
+	.btn{
+		width: 17rem;
+		font-size: 1.8rem;
+	}
+	.hero_area .btn.whyTiCash{
+		width: 21rem;
+		margin-left: 1rem;
+	}
+	.seeApp_area .swiper {
+		height: 460px;
+	}
+	.seeApp_area .swiper-slide {
+		width: 200px;
+	}
+	.choose_area h3{
+		font-size: 2.8rem;
+	}
+	.userExperience_body {
+		padding: 3rem 3.5rem 7rem 3.5rem;
+	}
+	.userExperience_area .icon_box .icon{
+		width: 5rem;
+	}
+	.partner_area h4{
+		font-size: 2.6rem;
+	}
+	.help_box .box{
+		display: block;
+		text-align: center;
+		padding: 4rem 2.5rem 3rem 4rem;
+	}
+	.help_box .box .icon{
+		margin-bottom: 2rem;
+	}
+	footer .menu_links li {
+		margin: 0 .8rem;
+	}
+	footer .menu_links li a{
+		font-size: 1.8rem;
+	}
+	.copyright p{
+		font-size: 1.4rem;
+	}
+}
+
+
